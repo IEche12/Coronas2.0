@@ -1,0 +1,121 @@
+/* Estilo general */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #87ceeb, #f5deb3);
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Título */
+h1 {
+    color: #ff4500;
+}
+
+/* Contenedor principal */
+.container {
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 400px;
+    margin: 0 auto;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Campos de entrada */
+input {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Botón */
+button {
+    background-color: #ff4500;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #e63900;
+}
+
+/* Estilo de imágenes laterales */
+.side-images {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100px;
+}
+
+.left-image {
+    left: 10px;
+}
+
+.right-image {
+    right: 10px;
+}
+
+/* Estilo del GIF */
+.neymar-gif {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 200px;
+    animation: bounce 2s infinite;
+}
+
+/* Animación para el GIF */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateX(-50%) translateY(0);
+    }
+    50% {
+        transform: translateX(-50%) translateY(-10px);
+    }
+}
+
+/* Media Queries para dispositivos móviles */
+@media screen and (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    .container {
+        max-width: 90%;
+    }
+
+    .side-images {
+        width: 70px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 18px;
+    }
+
+    .side-images {
+        display: none;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    .neymar-gif {
+        max-width: 150px;
+    }
+}

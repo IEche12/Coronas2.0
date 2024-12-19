@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convertidor a Coronas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Convertidor a Coronas</h1>
+    <div class="container">
+        <p>Introduce la cantidad en dólares:</p>
+        <input type="number" id="usdInput" placeholder="Ejemplo: 100">
+        <button onclick="convertir()">Convertir</button>
+        <p id="resultado"></p>
+    </div>
+
+    <!-- Imágenes -->
+    <img src="Dolares.png" alt="Dólares" class="side-images left-image">
+    <img src="Corona.png" alt="Corona" class="side-images right-image">
+    <img src="neymar.gif" alt="Neymar GIF" class="neymar-gif">
+
+    <script>
+        function convertir() {
+            const tasaDeCambio = 1.44; // 1 USD = 1.44 Coronas
+            const usd = parseFloat(document.getElementById("usdInput").value);
+            if (isNaN(usd) || usd <= 0) {
+                document.getElementById("resultado").innerText = "Por favor, ingresa un número válido.";
+            } else {
+                const coronas = usd * tasaDeCambio;
+                document.getElementById("resultado").innerText = `Equivale a ${coronas.toFixed(2)} Coronas.`;
+            }
+        }
+    </script>
+</body>
+</html>
