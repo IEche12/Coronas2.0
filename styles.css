@@ -52,7 +52,7 @@ button:hover {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    width: 100px;
+    width: 250px;
 }
 
 .left-image {
@@ -117,5 +117,6 @@ button:hover {
 
     .neymar-gif {
         max-width: 150px;
+        bottom: 50px;
     }
 }
